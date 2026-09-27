@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBuddy - Your Plan</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container result-container">
+
+    <h1>FitBuddy</h1>
+
+    {% if updated %}
+        <div style="
+            background: #d1fae5;
+            color: #065f46;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        ">
+            Your Plan Updated Successfully!
+        </div>
+    {% endif %}
+
+    <p class="subtitle">Your AI Generated Fitness Plan</p>
+
+    <h2>Hello, {{ name }} 👋</h2>
+
+    {% if updated %}
+
+        <div class="plan-box">
+            <h3>Original Plan</h3>
+            <pre>{{ original_plan }}</pre>
+        </div>
+
+        <div class="plan-box">
+            <h3>Updated Plan</h3>
+            <pre>{{ plan }}</pre>
+        </div>
+
+        <div class="plan-box">
+            <h3>Nutrition & Recovery Tip</h3>
+            <p>
+                Stay hydrated, eat balanced meals, have nutritious food,
+                and get enough rest and recovery.
+            </p>
+        </div>
+
+        <div class="plan-box">
+            <h3>Your Feedback</h3>
+            <p>{{ feedback }}</p>
+        </div>
+
+    {% else %}
+
+        <div class="plan-box">
+            <h3>7-Day Workout Plan</h3>
+            <pre>{{ plan }}</pre>
+        </div>
+
+        <a href="/feedback" class="back-button">
+            Give Feedback & Update Plan
+        </a>
+
+    {% endif %}
+
+    <a href="/" class="back-button">
+        Create Another Plan
+    </a>
+
+</div>
+
+</body>
+</html>
