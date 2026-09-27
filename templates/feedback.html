@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBuddy - Feedback</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>FitBuddy</h1>
+    <p class="subtitle">Update Your Workout Plan</p>
+
+    <form action="/update" method="post">
+
+        <label>User ID</label>
+        <input
+            type="text"
+            name="user_id"
+            placeholder="Enter your User ID"
+            required
+        >
+
+        <label>Your Feedback</label>
+        <textarea
+            name="feedback"
+            rows="6"
+            placeholder="Example: Make the workouts easier and reduce the workout duration..."
+            required
+        ></textarea>
+
+        <button type="submit">Update My Plan</button>
+
+    </form>
+
+    <a href="/" class="back-button">← Back to Home</a>
+
+</div>
+
+</body>
+</html>
