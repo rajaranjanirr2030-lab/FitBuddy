@@ -1,0 +1,37 @@
+Phase 6 — Project Testing
+Test Case 1 — Valid Input
+
+Input: Correct user information
+Expected: Personalized workout plan generated.
+
+Test Case 2 — Missing Input
+
+Input: Required field left empty
+Expected: User receives appropriate validation/error message.
+
+Test Case 3 — Invalid Input
+
+Input: Invalid value
+Expected: Application handles it without crashing.
+
+Test Case 4 — API Failure
+
+Condition: Gemini/API unavailable
+Expected: Application displays an appropriate error message instead of crashing.
+
+Test Case 5 — Different Fitness Goals
+
+Input: Different fitness goals
+Expected: Generated response should correspond to the selected goal.
+
+Test Case 6 — Different Intensity
+
+Input: Different intensity levels
+Expected: Generated plan should reflect the selected intensity.
+
+Testing Types
+Functional testing
+Input validation
+Error handling
+API failure handling
+Performance checking
